@@ -1,0 +1,17 @@
+.layout {
+  max-width: var(--max-width-desktop);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20% 0;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    max-width: var(--max-width-mobile);
+    margin: 0 auto;
+    padding: 0;
+  }
+}

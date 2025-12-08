@@ -1,0 +1,26 @@
+@import "./reset/normilize.css";
+@import "./reset/reset.local.css";
+@import "./values/values.css";
+@import "typografy/typografy.css";
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-slate-900);
+  background-color: var(--color-slate-300);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-slate-900);
+}
+
+p {
+  color: var(--color-slate-700);
+  margin-bottom: 1rem;
+}
