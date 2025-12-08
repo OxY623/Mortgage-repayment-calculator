@@ -1,0 +1,23 @@
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 0.5em;
+  text-wrap: nowrap;
+}
+
+.radio-container {
+  border: 1px solid var(--color-slate-300);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0.5em;
+}

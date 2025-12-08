@@ -1,11 +1,12 @@
 .layout {
-  max-width: var(--max-width-desktop);
-  margin: 0 auto;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 20% 0;
+  padding-top: 30em;
+  padding-bottom: 30em;
+  height: min-content;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -13,5 +14,6 @@
     max-width: var(--max-width-mobile);
     margin: 0 auto;
     padding: 0;
+    height: 100vh;
   }
 }

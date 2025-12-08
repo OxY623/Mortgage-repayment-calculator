@@ -1,10 +1,11 @@
-import type { JSX } from "react";
+import type { ChangeEvent, JSX } from "react";
 import "./Input.css";
 
 type Props = {
   label: string;
   suffix?: string;
   error?: string;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 } & JSX.IntrinsicElements["input"];
 
 export const Input = ({ label, suffix, error, ...rest }: Props) => (

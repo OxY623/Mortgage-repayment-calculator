@@ -1,15 +1,22 @@
 .Button {
   font-family: var(--font-family);
   font-weight: var(--font-weight-bold);
-  font-size: 1rem;
-  padding: 0.75rem 1.25rem;
+  font-size: 1em;
+  padding: 0.75em 1.25em;
   border: none;
-  border-radius: 6px;
+  border-radius: 2em;
   cursor: pointer;
   background-color: var(--color-lime);
   color: var(--color-slate-900);
   transition: background-color 0.2s ease;
-  width: auto;
+  width: min-content;
+  height: min-content;
+  text-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 
 .Button:hover,

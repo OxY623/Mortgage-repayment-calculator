@@ -1,0 +1,30 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: 100%;
+}
+
+form > div:first-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+form > div:first-child button {
+  font-family: var(--font-family);
+  font-size: 0.875em;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-slate-700);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+form > div:first-child button:hover {
+  color: var(--color-slate-900);
+}
+
+

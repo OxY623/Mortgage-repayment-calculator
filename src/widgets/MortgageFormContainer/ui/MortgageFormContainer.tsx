@@ -1,16 +1,21 @@
-import { MortgageForm } from "./MortgageForm";
+import { MortgageForm } from "@/features/mortgageCalculator";
+import { type FormEventHandler } from "react";
+import "./MortgageFormContainer.css";
+type Props = {
+  values: {};
+  onChange: (field: string, value: string) => void;
+  onSubmit: FormEventHandler<HTMLFormElement>;
+};
 
-export const MortgageFormContainer = () => {
-  const [amount, setAmount] = useState(0);
-  const handleSubmit = () => {
-    /* расчёт логики */
-  };
-
+export const MortgageFormContainer = ({
+  values,
+  onChange,
+  onSubmit,
+}: Props) => {
   return (
-    <MortgageForm
-      amount={amount}
-      onAmountChange={setAmount}
-      onSubmit={handleSubmit}
-    />
+    <div className="MortgageFormContainer">
+      <h2>Калькулятор ипотечных выплат</h2>
+      <MortgageForm values={values} onChange={onChange} onSubmit={onSubmit} />
+    </div>
   );
 };

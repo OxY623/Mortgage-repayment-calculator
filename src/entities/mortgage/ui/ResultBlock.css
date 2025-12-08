@@ -1,0 +1,32 @@
+.results {
+  background-color: var(--color-slate-900);
+  display: grid;
+  grid-template-rows: 160px 32px 32px;
+  place-items: center;
+  /* height: 100%; */
+  padding: 10% 5%;
+  gap: 1em;
+  text-align: center;
+  border-bottom-left-radius: 25rem;
+}
+
+.results_img {
+  width: 10em;
+}
+.results_title {
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+  font-size: 22rem;
+}
+.results_p {
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .results {
+    border-bottom-left-radius: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}

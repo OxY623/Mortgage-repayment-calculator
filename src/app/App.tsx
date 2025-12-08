@@ -1,12 +1,23 @@
-import { Button } from "@/shared/ui/Button/Button";
 import Container from "@/shared/ui/Container/Container";
+import Loader from "@/shared/ui/Loader/Loader";
+import { lazy, Suspense } from "react";
 import "./app.css";
+
+const CalculatorPage = lazy(() => import("@/pages/calculator/"));
 
 function App() {
   return (
-    <Container>
-      <Button style={{ width: "100%" }}>Click me</Button>
-    </Container>
+    <Suspense
+      fallback={
+        <div className="loader_container">
+          <Loader />
+        </div>
+      }
+    >
+      <Container>
+        <CalculatorPage />
+      </Container>
+    </Suspense>
   );
 }
 

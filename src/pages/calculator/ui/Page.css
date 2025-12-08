@@ -1,0 +1,16 @@
+.calculator-page {
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .calculator-page {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+}

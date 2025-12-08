@@ -1,14 +1,67 @@
-input,
-select {
-  font-family: var(--font-family);
-  font-size: 1rem;
-  padding: 0.5rem;
-  border: 1px solid var(--color-slate-300);
-  border-radius: 4px;
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
   width: 100%;
 }
 
+.input-label {
+  font-family: var(--font-family);
+  font-size: 0.875em;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-slate-900);
+}
+
+input,
+select {
+  font-family: var(--font-family);
+  font-size: 1em;
+  font-weight: 700;
+
+  border: none;
+  width: 100%;
+}
+
+.input-field {
+  border: 1px solid var(--color-slate-300);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 0.5rem;
+}
+
+.input-field[data-suffix="£"] {
+  flex-direction: row-reverse;
+  padding-left: 0;
+  padding-right: 0.5rem;
+}
+
+.input-suffix {
+  width: 2em;
+  height: auto;
+  padding: 0.5em;
+  background-color: var(--color-slate-300);
+  border: none;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-family);
+  font-size: 1em;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-slate-900);
+}
+
+.input-error {
+  font-family: var(--font-family);
+  font-size: 0.875em;
+  color: var(--color-red);
+  margin-top: -0.25em;
+}
+
 input:focus {
-  border-color: var(--color-lime);
   outline: none;
+}
+
+.input-field:focus-within {
+  border-color: var(--color-lime);
 }
