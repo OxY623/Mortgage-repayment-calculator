@@ -12,7 +12,7 @@ export const Input = ({ label, suffix, error, ...rest }: Props) => (
   <label className="input-wrapper">
     <span className="input-label">{label}</span>
     <div className="input-field">
-      <input type="number" {...rest} min={1} max={10000000} step={0.01} />
+      <input type="number" {...rest} />
       {suffix && <span className="input-suffix">{suffix}</span>}
     </div>
     {error && <span className="input-error">{error}</span>}
