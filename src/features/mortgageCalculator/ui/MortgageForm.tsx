@@ -3,47 +3,52 @@ import { Input } from "@/shared/ui/Input/Input";
 import { RadioGroup } from "@/shared/ui/RadioGroup/RadioGroup";
 import type { ChangeEvent } from "react";
 import { FormEventHandler } from "react";
-import './MortgageForm.css';
+import "./MortgageForm.css";
 
 type Props = {
   values: { [key: string]: string };
   onChange: (field: string, value: string) => void;
   onSubmit: FormEventHandler<HTMLFormElement>;
+  onClear?: () => void;
 };
 
-export const MortgageForm = ({ values, onChange, onSubmit }: Props) => (
+export const MortgageForm = ({
+  values,
+  onChange,
+  onSubmit,
+  onClear,
+}: Props) => (
   <form onSubmit={onSubmit}>
-    <div>
-      <button type="button">Очистть форму</button>
-    </div>
     <Input
-      label="Mortgage Amount"
-      suffix="£"
+      label="Сумма ипотеки"
+      suffix="руб."
       value={values.amount}
       onChange={(e) => onChange("amount", e.target.value)}
       required
     />
-    <Input
-      label="Mortgage Term"
-      suffix="years"
-      value={values.term}
-      onChange={(e: ChangeEvent<HTMLInputElement>) =>
-        onChange("term", e.target.value)
-      }
-      required
-    />
-    <Input
-      label="Interest Rate"
-      suffix="%"
-      value={values.rate}
-      onChange={(e: ChangeEvent<HTMLInputElement>) =>
-        onChange("rate", e.target.value)
-      }
-      required
-    />
+    <div className="input-group">
+      <Input
+        label="Срок ипотенки"
+        suffix="years"
+        value={values.term}
+        onChange={(e: ChangeEvent<HTMLInputElement>) =>
+          onChange("term", e.target.value)
+        }
+        required
+      />
+      <Input
+        label="Процентная ставка"
+        suffix="%"
+        value={values.rate}
+        onChange={(e: ChangeEvent<HTMLInputElement>) =>
+          onChange("rate", e.target.value)
+        }
+        required
+      />
+    </div>
     <RadioGroup
-      label="Mortgage Type"
-      options={["Repayment", "Interest Only"]}
+      label="Тип ипотеки"
+      options={["Аннуитетный", "Дифференцированный"]}
       selected={values.type}
       onChange={(value) => onChange("type", value)}
     />

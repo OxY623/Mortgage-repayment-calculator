@@ -1,0 +1,62 @@
+.error-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75em;
+  padding: 1em 1.25em;
+  border-radius: 0.75em;
+  background-color: hsl(4, 69%, 95%);
+  border: 1px solid var(--color-red);
+  color: var(--color-slate-900);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.error-icon {
+  width: 2.25em;
+  height: 2.25em;
+  border-radius: 50%;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  display: grid;
+  place-items: center;
+  font-weight: var(--font-weight-bold);
+  font-size: 1.1em;
+}
+
+.error-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.error-title {
+  margin: 0;
+  font-size: 1em;
+  font-weight: var(--font-weight-bold);
+}
+
+.error-message {
+  margin: 0;
+  font-size: 0.95em;
+  color: var(--color-slate-700);
+}
+
+.error-action {
+  align-self: flex-start;
+  margin-top: 0.25em;
+  padding: 0.4em 0.9em;
+  border-radius: 0.5em;
+  border: 1px solid var(--color-red);
+  background: transparent;
+  color: var(--color-red);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.error-action:hover,
+.error-action:focus {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  outline: none;
+}
+

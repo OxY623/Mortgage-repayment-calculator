@@ -5,3 +5,16 @@
   justify-items: center;
   place-items: center;
 }
+
+@media (max-width: 768px) {
+  h1,
+  h2,
+  h3 {
+    font-size: 1.6em !important;
+    font-weight: 700 !important;
+  }
+
+  p {
+    font-size: 1.2em !important;
+  }
+}

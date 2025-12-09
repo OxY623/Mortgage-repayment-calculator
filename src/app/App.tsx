@@ -1,5 +1,6 @@
 import Container from "@/shared/ui/Container/Container";
 import Loader from "@/shared/ui/Loader/Loader";
+import { ErrorBoundary } from "@/shared/ui/ErrorBoundary/ErrorBoundary";
 import { lazy, Suspense } from "react";
 import "./app.css";
 
@@ -14,9 +15,14 @@ function App() {
         </div>
       }
     >
-      <Container>
-        <CalculatorPage />
-      </Container>
+      <ErrorBoundary
+        title="Не удалось загрузить страницу"
+        message="Попробуйте обновить или повторить попытку позже."
+      >
+        <Container>
+          <CalculatorPage />
+        </Container>
+      </ErrorBoundary>
     </Suspense>
   );
 }

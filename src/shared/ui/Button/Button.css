@@ -22,5 +22,5 @@
 .Button:hover,
 .Button:focus {
   background-color: var(--color-red);
-  color: var(--color-white);
+  color: var(--color-black);
 }

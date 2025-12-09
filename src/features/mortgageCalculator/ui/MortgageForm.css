@@ -5,12 +5,12 @@ form {
   width: 100%;
 }
 
-form > div:first-child {
+/* form>div:first-child {
   display: flex;
   justify-content: flex-end;
 }
 
-form > div:first-child button {
+form>div:first-child button {
   font-family: var(--font-family);
   font-size: 0.875em;
   font-weight: var(--font-weight-medium);
@@ -21,10 +21,38 @@ form > div:first-child button {
   padding: 0.5em;
   text-decoration: underline;
   transition: color 0.2s ease;
-}
+} */
 
-form > div:first-child button:hover {
+/* form > div:first-child button:hover {
   color: var(--color-slate-900);
+} */
+
+form > label:first-child > .input-field {
+  flex-direction: row-reverse;
+  padding-left: 0;
+  padding-right: 0.5rem;
 }
 
+form > .input-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
 
+@media (max-width: 768px) {
+  form > .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  form label,
+  form .radio-group-label {
+    font-size: 1.2em !important;
+  }
+
+  form > button {
+    width: 100% !important;
+    font-size: 1.2em !important;
+  }
+}

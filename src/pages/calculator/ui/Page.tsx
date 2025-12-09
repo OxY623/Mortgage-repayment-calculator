@@ -21,6 +21,16 @@ const CalculatorPage = () => {
     setValues((prev) => ({ ...prev, [field]: value }));
   };
 
+  const handleClear=()=>{
+    setValues({
+      amount: "",
+      term: "",
+      rate: "",
+      type: "Repayment",
+    });
+    setResults(null);
+  }
+
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     const { amount, term, rate } = values;
@@ -40,6 +50,7 @@ const CalculatorPage = () => {
         values={values}
         onChange={handleChange}
         onSubmit={handleSubmit}
+        onClear={handleClear}
       />
 
       <ResultBlock
